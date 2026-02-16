@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- $ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="./output.css">
     <title>Forest</title>
 </head>
-<body class="bg-verde-800 font-sans">
+<body class="bg-verde-800 font-sans mb-96">
   <div class="container mt-4 flex justify-center md:justify-start">
     <div class="inline-flex items-center rounded-md bg-verde-900">
       <span class="size-2 bg-verde-300 block rounded-full relative -left-1">
@@ -33,5 +34,30 @@
       </ul>
     </nav>
   </header>
+
+  <main class="container">
+    <div class="text-white px-8 pb-8 pt-64 bg-gradient-to-t from-verde-950/80 relative rounded-2xl overflow-hidden max-sm:px-4 max-sm:pt-12">
+      <img class="absolute inset-0 size-full object-cover -z-10" src="../img/floresta.jpg" alt="">
+
+      <div class="bg-verde-950/60 rounded-xl flex flex-col items-start gap-2 p-4 mb-8 sm:gap-8 sm:items-center sm:py-1 sm:pl-4 sm:pr-1 sm:bg-verde-950 sm:rounded-full sm:inline-flex sm:flex-row">
+        vagas para dezembro abertas
+        <a class="bg-verde-400 text-verde-900 py-2 px-4 inline-block rounded-full" href="">Reserve Hoje</a>
+      </div>
+
+
+      <h1 class="mb-8 font-serif text-balance max-w-screen-sm text-4xl sm:text-5xl sm:mb-20">Venha Experimentar a Vida na Floresta</h1>
+      <div class="sm:flex justify-between text-sm items-end">
+        <p class=" max-sm:mb-4">Melhores locais para se visitar <a class="underline decoration-2 underline-offset-4 hover:no-underline" href="./">2026</a></p>
+        <div>
+          <p class="uppercase mb-2">Recomendado por</p>
+          <p class="flex items-center gap-4">
+            <img class="w-28" src="../img/parceiros/wildbeast.svg" alt="Wildbeast"">
+            <span>|</span>
+            Revista Nacional
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
