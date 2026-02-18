@@ -177,7 +177,7 @@
     
   </section>
 
-
+<!-- Ciclo Natural -->
   <section class="container bg-[url('../img/padrao.svg')] bg-contain bg-center bg-no-repeat mb-12 sm:mb-16 sm:py-16">
     <p class="mb-4 text-center text-verde-200 uppercase tracking-widest text-sm">Ciclo Natural</p>
     <h2 class=" mb-8 mx-auto font-serif text-balance text-center max-w-screen-md text-white text-4xl sm:text-6xl">Ritmo da Floresta</h2>
@@ -192,7 +192,7 @@
         <span class="text-verde-300">05:40 - 07:00</span>
       </div>
 
-      <div class="grid flex-1 gap-4 bg-verde-900 p-6 sm:p8 rounded-xl transition-transform sm:translate-y-12 sm:hover:translate-y-12">
+      <div class="grid flex-1 gap-4 bg-verde-900 p-6 sm:p8 rounded-xl transition-transform sm:translate-y-16 sm:hover:translate-y-12">
         <div class="bg-verde-400 rounded-full size-10 flex items-center justify-center">
           <img src="../img/dia.svg" alt="">
         </div>
@@ -212,5 +212,57 @@
 
     </div>
   </section>
+
+  <!-- Contato -->
+   <section id="contato" class="container mb-12 sm:mb-16 grid lg:grid-cols-2 gap-8">
+
+    <div class="grid gap-4">
+      <h1 class="font-serif text-4xl text-verde-300 mb-4">Nossos Contatos</h1>
+      <p class="text-gray-200 text-balance">Tem interesse em passar uma temporada com a gente na Forest? Entre em contato com a gente por telefone ou email.</p>
+      <div>
+        <div>
+          <span class="h-0.5 w-6 bg-verde-400 inline-block"></span>
+          <h2 class="mb-2 text-2xl text-verde-300 font-serif">Base</h2>
+          <p class="text-gray-300">Rua da Mata, 123 - Floresta Nacional - SC</p>
+        </div>
+
+        <div>
+          <span class="h-0.5 w-6 bg-verde-400 inline-block"></span>
+          <h2 class="mb-2 text-2xl text-verde-300 font-serif">Email</h2>
+          <p class="text-gray-300">contato@forest.com.br</p>
+        </div>
+
+        <div>
+          <span class="h-0.5 w-6 bg-verde-400 inline-block"></span>
+          <h2 class="mb-2 text-2xl text-verde-300 font-serif">Telefone</h2>
+          <p class="text-gray-300">(12) 3456-7890</p>
+        </div>
+      </div>
+    </div>
+
+    <form class="grid gap-4 rounded-xl bg-verde-900 shadow-2xl p-4 lg:p-8" action="">
+      <div class="grid gap-1">
+        <label class="text-white" for="nome">Nome</label>
+        <input class="bg-verde-800 border-verde-800 text-white p-2 rounded-md border-2 focus:outline-none focus:ring-2 focus:ring-verde-400 focus:border-verde-900" type="text" id="nome" name="nome">
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div class="grid gap-1">
+          <label class="text-white" for="email">Email</label>
+          <input class="bg-verde-800 border-verde-800 text-white p-2 rounded-md border-2 focus:outline-none focus:ring-2 focus:ring-verde-400 focus:border-verde-900" type="email" id="email" name="email">
+        </div>
+          <div class="grid gap-1">
+          <label class="text-white" for="telefone">Telefone</label>
+          <input class="bg-verde-800 border-verde-800 text-white p-2 rounded-md border-2 focus:outline-none focus:ring-2 focus:ring-verde-400 focus:border-verde-900 placeholder:text-verde-900" type="tel" id="telefone" name="telefone" placeholder="49 99999-9999">
+        </div>
+      </div>
+      <div class="grid gap-1">
+          <label class="text-white" for="mensagem">Mensagem</label>
+          <textarea rows="5" class="bg-verde-800 border-verde-800 text-white p-2 rounded-md border-2 focus:outline-none focus:ring-2 focus:ring-verde-400 focus:border-verde-900 placeholder:text-verde-900 resize-none" id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." type="text"></textarea>
+      </div>
+      <button class="bg-verde-400 text-verde-900 py-2 px-4 inline-block rounded-full">Enviar Mensagem</button>
+    </form>
+
+   </section>
 </body>
 </html>
