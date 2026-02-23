@@ -51,6 +51,7 @@ module.exports = {
         '.animate-1': { 'animation-delay': '100ms' },
         '.animate-2': { 'animation-delay': '200ms' },
         '.animate-3': { 'animation-delay': '300ms' },
+        '.animate-4': { 'animation-delay': '400ms' },
       })
     }),
   ],
