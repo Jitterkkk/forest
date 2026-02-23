@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: ["./index.html", "./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
@@ -22,17 +24,13 @@ module.exports = {
           },
         },
         fadeIn: {
-          '0%': {
-            opacity: 0,
-          },
-          '100%': {
-            opacity: 1,
-          },
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
         },
       },
       animation: {
-        ["slideIn"]: "slideIn .4s ease-in-out forwards",
-        ["fadeIn"]: "fadeIn .4s ease-in-out forwards",
+        slideIn: "slideIn .4s ease-in-out forwards",
+        fadeIn: "fadeIn .4s ease-in-out forwards",
       },
       colors: {
         verde: {
@@ -47,5 +45,13 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-};
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.animate-1': { 'animation-delay': '100ms' },
+        '.animate-2': { 'animation-delay': '200ms' },
+        '.animate-3': { 'animation-delay': '300ms' },
+      })
+    }),
+  ],
+}
