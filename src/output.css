@@ -746,6 +746,22 @@ video {
   flex: 1 1 0%;
 }
 
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn .4s ease-in-out forwards;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1231,16 +1247,8 @@ video {
   color: rgb(145 238 119 / var(--tw-text-opacity, 1));
 }
 
-.hover\:underline:hover {
-  text-decoration-line: underline;
-}
-
 .hover\:no-underline:hover {
   text-decoration-line: none;
-}
-
-.hover\:underline-offset-8:hover {
-  text-underline-offset: 8px;
 }
 
 .hover\:before\:w-10:hover::before {
@@ -1306,22 +1314,12 @@ video {
     border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
   }
 
-  .max-lg\:divide-white > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-opacity: 1;
-    border-color: rgb(255 255 255 / var(--tw-divide-opacity, 1));
-  }
-
   .max-lg\:divide-white\/10 > :not([hidden]) ~ :not([hidden]) {
     border-color: rgb(255 255 255 / 0.1);
   }
 
   .max-lg\:p-8 {
     padding: 2rem;
-  }
-
-  .max-lg\:hover\:bg-white:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   }
 
   .max-lg\:hover\:bg-white\/10:hover {
