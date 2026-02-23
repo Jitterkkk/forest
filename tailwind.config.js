@@ -10,6 +10,30 @@ module.exports = {
       },
     },
     extend: {
+      keyframes: {
+        slideIn: {
+          '0%': {
+            opacity: 0,
+            transform: "translateX(-20px)",
+          },
+          '100%': {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+        },
+        fadeIn: {
+          '0%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 1,
+          },
+        },
+      },
+      animation: {
+        ["slideIn"]: "slideIn .4s ease-in-out forwards",
+        ["fadeIn"]: "fadeIn .4s ease-in-out forwards",
+      },
       colors: {
         verde: {
           200: "#ACEF75",
