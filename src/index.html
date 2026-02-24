@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../favicon.png" type="image/png" />
     <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <title>Forest</title>
   </head>
   <body class="bg-verde-800 font-sans">
     <div class="container mt-4 flex justify-center md:justify-start">
       <div class="inline-flex items-center rounded-md bg-verde-900">
-        <span class="size-2 bg-verde-300 block rounded-full relative -left-1">
-        </span>
+        <span class="neon size-2 block relative -left-1"> </span>
         <div class="flex text-verde-300 rounded-full relative -left-2">
           <div class="px-4 py-2 capitalize" id="dia"></div>
           <div class="px-4 py-2" id="temperatura">25°</div>
@@ -25,9 +30,16 @@
       <a href="./">
         <img src="../img/forest.svg" alt="Forest" />
       </a>
-      <nav id="mobile-menu" class="hidden items-center lg:block z-40 max-lg:fixed max-lg:w-full max-lg:inset-0">
-        <div class="fixed lg:hidden inset-0 bg-verde-950/40 backdrop-blur-md"></div>
-        <ul class="text-white max-lg:p-8 max-lg:w-full max-lg:divide-y-2 max-lg:divide-white/10 max-lg:z-50 max-lg:absolute text-2xl lg:text-xl lg:flex lg:flex-wrap lg:gap-8">
+      <nav
+        id="mobile-menu"
+        class="hidden items-center lg:block z-40 max-lg:fixed max-lg:w-full max-lg:inset-0"
+      >
+        <div
+          class="fixed lg:hidden inset-0 bg-verde-950/40 backdrop-blur-md"
+        ></div>
+        <ul
+          class="text-white max-lg:p-8 max-lg:w-full max-lg:divide-y-2 max-lg:divide-white/10 max-lg:z-50 max-lg:absolute text-2xl lg:text-xl lg:flex lg:flex-wrap lg:gap-8"
+        >
           <li class="animate-slideIn opacity-0 animate-1">
             <a
               class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
@@ -36,7 +48,9 @@
             >
           </li>
           <li class="animate-slideIn opacity-0 animate-2">
-            <a class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8" href="#eventos"
+            <a
+              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
+              href="#eventos"
               >Eventos</a
             >
           </li>
@@ -48,15 +62,23 @@
             >
           </li>
           <li class="animate-slideIn opacity-0 animate-4">
-            <a class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8" href="#contato"
+            <a
+              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
+              href="#contato"
               >Contato</a
             >
           </li>
         </ul>
       </nav>
 
-      <button id="mobile-button" class="flex items-center gap-3 bg-verde-400 text-verde-900 py-2 px-4 rounded-full lg:hidden">Menu
-        <span class="h-3 w-4 flex flex-col justify-between *:h-0.5 *:rounded-md *:bg-verde-800">
+      <button
+        id="mobile-button"
+        class="flex items-center gap-3 bg-verde-400 text-verde-900 py-2 px-4 rounded-full lg:hidden"
+      >
+        Menu
+        <span
+          class="h-3 w-4 flex flex-col justify-between *:h-0.5 *:rounded-md *:bg-verde-800"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -73,13 +95,17 @@
           src="../img/floresta.jpg"
           alt=""
         /> -->
-        <video id="video" class="absolute inset-0 size-full object-cover -z-10 animate-fadeIn" src="../img/video_chuva.mp4"
-        muted
-        autoplay
-        playsinline
-        loop
-        width="1280"
-        height="720"></video>
+        <video
+          id="video"
+          class="absolute inset-0 size-full object-cover -z-10 animate-fadeIn"
+          src="../img/video_chuva.mp4"
+          muted
+          autoplay
+          playsinline
+          loop
+          width="1280"
+          height="720"
+        ></video>
 
         <div
           class="bg-verde-950/60 rounded-xl flex flex-col items-start gap-2 p-4 mb-8 sm:gap-8 sm:items-center sm:py-1 sm:pl-4 sm:pr-1 sm:bg-verde-950 sm:rounded-full sm:inline-flex sm:flex-row"
@@ -571,10 +597,13 @@
       tempo.innerText = random > 25 ? "🌤️" : `🌧️ ${random + 5}%`;
 
       const date = new Date();
-      dia.innerText = date.toLocaleDateString("pt-BR", { weekday: "long" }).replace("-feira", "");
+      dia.innerText = date
+        .toLocaleDateString("pt-BR", { weekday: "long" })
+        .replace("-feira", "");
 
-      video.src = random > 25 ? "../img/video_sol.mp4" : "../img/video_chuva.mp4";
-      
+      video.src =
+        random > 25 ? "../img/video_sol.mp4" : "../img/video_chuva.mp4";
+
       const mobileButton = document.getElementById("mobile-button");
       const mobileMenu = document.getElementById("mobile-menu");
 

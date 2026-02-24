@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .neon {
+        @apply rounded-full border border-verde-200 bg-gradient-to-b from-verde-200 to-verde-400 text-verde-900;
+    }
+}

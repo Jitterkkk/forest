@@ -154,7 +154,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: DM Sans, system-ui, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -594,6 +594,20 @@ video {
   }
 }
 
+.neon {
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(172 239 117 / var(--tw-border-opacity, 1));
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #ACEF75 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(172 239 117 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #17E880 var(--tw-gradient-to-position);
+  --tw-text-opacity: 1;
+  color: rgb(15 28 21 / var(--tw-text-opacity, 1));
+}
+
 .fixed {
   position: fixed;
 }
@@ -657,10 +671,6 @@ video {
 
 .mb-8 {
   margin-bottom: 2rem;
-}
-
-.mb-96 {
-  margin-bottom: 24rem;
 }
 
 .mt-4 {
@@ -746,6 +756,20 @@ video {
   flex: 1 1 0%;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn .4s ease-in-out forwards;
+}
+
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -760,20 +784,6 @@ video {
 
 .animate-slideIn {
   animation: slideIn .4s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn .4s ease-in-out forwards;
 }
 
 .cursor-pointer {
@@ -918,11 +928,6 @@ video {
   border-color: rgb(15 28 21 / var(--tw-border-opacity, 1));
 }
 
-.bg-verde-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(145 238 119 / var(--tw-bg-opacity, 1));
-}
-
 .bg-verde-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(23 232 128 / var(--tw-bg-opacity, 1));
@@ -1053,11 +1058,11 @@ video {
 }
 
 .font-sans {
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: DM Sans, system-ui, sans-serif;
 }
 
 .font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: DM Serif, Georgia, serif;
 }
 
 .text-2xl {
